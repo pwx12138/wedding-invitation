@@ -18,12 +18,27 @@ function generateHeartPeach() {
 
     // 将新创建的元素添加到页面中
     document.querySelector('.container').appendChild(heart);
-
-    // 让图片随机出现的时间不固定
-    setTimeout(function () {
-        generateHeartPeach();
-    }, 500); // 每1秒钟生成一个新的爱心桃
+    heart.addEventListener('animationend', function() {
+        heart.remove()
+    })
+    setTimeout(generateHeartPeach, 500); // 每500毫秒再生成一个新的爱心桃
 }
 
-// 启动生成爱心桃
+function distroyHeartPeach() {
+    setTimeout(distroyHeartPeach, 500); // 每500毫秒再生成一个新的爱心桃
+}
+
+// function clearHearts() {
+//     // 获取所有 class 为 'heart' 的元素
+//     const hearts = document.querySelectorAll('.container .heart');
+
+//     // 遍历所有匹配的元素并删除
+//     hearts.forEach(function(heart) {
+//         heart.remove();
+//     });
+// }
+
+// // 每 5 秒钟执行一次清理操作
+// setInterval(clearHearts, 5000);
+
 generateHeartPeach();

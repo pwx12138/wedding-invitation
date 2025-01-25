@@ -1,17 +1,26 @@
 body {
-    background-image: url('images/background.jpg'); /* 替换为你的图片路径 */
-    background-size: cover; /* 让背景图覆盖整个页面 */
-    background-position: center; /* 背景图居中 */
-    background-repeat: no-repeat; /* 不重复背景图 */
-    height: 100vh; /* 使页面高度为视口高度 */
-    margin: 0; /* 去掉页面默认的边距 */
-    font-family: Arial, sans-serif; /* 设置字体 */
-    color: white; /* 设置文字颜色为白色 */
+    background-image: url('images/background.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 让背景图覆盖整个页面 */
+    background-position: center;
+    /* 背景图居中 */
+    background-repeat: no-repeat;
+    /* 不重复背景图 */
+    height: 100vh;
+    /* 使页面高度为视口高度 */
+    margin: 0;
+    /* 去掉页面默认的边距 */
+    font-family: Arial, sans-serif;
+    /* 设置字体 */
+    color: white;
+    /* 设置文字颜色为白色 */
 }
 
 .container {
     background-color: white;
-    background-color: rgba(255, 0, 0, 0); /* 红色背景，透明度 50% */
+    background-color: rgba(255, 0, 0, 0);
+    /* 红色背景，透明度 50% */
     padding: 50px;
     text-align: center;
     margin-top: 50px;
@@ -21,11 +30,16 @@ body {
 
 .heart {
     position: absolute;
-    width: 50px; /* 初始大小 */
-    height: 50px; /* 初始大小 */
-    background-image: url('images/heart-peach.png'); /* 替换为你的爱心桃图片路径 */
+    width: 50px;
+    /* 初始大小 */
+    height: 50px;
+    /* 初始大小 */
+    background-image: url('images/heart-peach.png');
+    /* 替换为你的爱心桃图片路径 */
     background-size: cover;
-    animation: growAndFade 5s forwards; /* 动画效果 */
+    animation: growAndFade 5s forwards;
+    /* 动画效果 */
+    z-index: 1; /* 确保它位于底层 */
 }
 
 /* 图片从小到大、逐渐消失的动画 */
@@ -34,24 +48,40 @@ body {
         transform: scale(0);
         opacity: 1;
     }
+
     50% {
-        transform: scale(3); /* 放大 */
-        opacity: 0.7; /* 逐渐变透明 */
+        transform: scale(3);
+        /* 放大 */
+        opacity: 0.7;
+        /* 逐渐变透明 */
     }
+
     100% {
-        transform: scale(6); /* 放到最大 */
-        opacity: 0; /* 完全透明消失 */
+        transform: scale(6);
+        /* 放到最大 */
+        opacity: 0;
+        /* 完全透明消失 */
     }
 }
+
 .custom-btn {
-    background-color: #ff0000; /* 背景颜色 */
-    color: white; /* 文字颜色 */
-    font-size: 18px; /* 字体大小 */
-    padding: 10px 20px; /* 内边距 */
-    border: 2px solid #005f6b; /* 边框颜色和厚度 */
-    border-radius: 5px; /* 圆角 */
-    cursor: pointer; /* 鼠标悬停时显示手形光标 */
-    transition: background-color 0.3s ease; /* 背景颜色的渐变过渡效果 */
+    background-color: #ff0000;
+    /* 背景颜色 */
+    color: white;
+    /* 文字颜色 */
+    font-size: 18px;
+    /* 字体大小 */
+    padding: 10px 20px;
+    /* 内边距 */
+    border: 2px solid #005f6b;
+    /* 边框颜色和厚度 */
+    border-radius: 5px;
+    /* 圆角 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手形光标 */
+    transition: background-color 0.3s ease;
+    /* 背景颜色的渐变过渡效果 */
+    z-index: 10; /* 设置按钮的 z-index 为更高的值 */
 }
 
 
