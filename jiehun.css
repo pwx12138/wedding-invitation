@@ -1,7 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
+    background-image: url('images/background.jpg'); /* 替换为你的图片路径 */
+    background-size: cover; /* 让背景图覆盖整个页面 */
+    background-position: center; /* 背景图居中 */
+    background-repeat: no-repeat; /* 不重复背景图 */
+    height: 100vh; /* 使页面高度为视口高度 */
+    margin: 0; /* 去掉页面默认的边距 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    color: white; /* 设置文字颜色为白色 */
 }
 
 .container {
