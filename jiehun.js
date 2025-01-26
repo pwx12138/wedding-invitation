@@ -39,6 +39,7 @@ function startHeart() {
     document.querySelector('.container').appendChild(heart1);
     heart1.addEventListener('animationend', function() {
         heart1.remove()
+        musicElement.muted = false;  // 解除静音
         musicElement.play();
         generateHeartPeach()
     })
