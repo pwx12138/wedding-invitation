@@ -41,7 +41,6 @@ function startHeart() {
         heart1.remove()
         generateHeartPeach()
     })
-    setTimeout(generateHeartPeach, 250); // 每500毫秒再生成一个新的爱心桃
 }
 
 startHeart()
