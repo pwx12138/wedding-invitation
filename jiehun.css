@@ -51,14 +51,14 @@ body {
     }
 
     50% {
-        transform: scale(3);
+        transform: scale(2);
         /* 放大 */
         opacity: 0.7;
         /* 逐渐变透明 */
     }
 
     100% {
-        transform: scale(6);
+        transform: scale(4);
         /* 放到最大 */
         opacity: 0;
         /* 完全透明消失 */
