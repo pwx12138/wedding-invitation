@@ -33,9 +33,9 @@ body {
 
 .heart {
     position: absolute;
-    width: 30px;
+    width: 10px;
     /* 初始大小 */
-    height: 30px;
+    height: 10px;
     /* 初始大小 */
     background-image: url('images/heart-peach.png');
     /* 替换为你的爱心桃图片路径 */
