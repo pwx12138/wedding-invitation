@@ -20,13 +20,8 @@ function generateHeartPeach() {
     heart.addEventListener('animationend', function() {
         heart.remove()
     })
-    setTimeout(generateHeartPeach, 500); // 每500毫秒再生成一个新的爱心桃
+    setTimeout(generateHeartPeach, 250); // 每500毫秒再生成一个新的爱心桃
 }
-
-function distroyHeartPeach() {
-    setTimeout(distroyHeartPeach, 500); // 每500毫秒再生成一个新的爱心桃
-}
-
 // function clearHearts() {
 //     // 获取所有 class 为 'heart' 的元素
 //     const hearts = document.querySelectorAll('.container .heart');
