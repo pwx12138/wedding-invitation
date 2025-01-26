@@ -9,8 +9,8 @@ function generateHeartPeach() {
     heart.classList.add('heart'); // 给它添加 'heart' 类来应用样式
 
     // 随机设置爱心桃图片出现的起始位置
-    var randomX = Math.random() * window.innerWidth; // 随机X坐标
-    var randomY = Math.random() * window.innerHeight; // 随机Y坐标
+    var randomX = Math.random() * window.innerWidth - 500; // 随机X坐标
+    var randomY = Math.random() * window.innerHeight - 500; // 随机Y坐标
 
     // 设置绝对定位来显示在随机位置
     heart.style.left = randomX + 'px';
