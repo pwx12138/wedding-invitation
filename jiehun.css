@@ -161,7 +161,7 @@ body {
     /* 鼠标悬停时显示手形光标 */
     transition: background-color 0.3s ease;
     /* 背景颜色的渐变过渡效果 */
-    z-index: 10; /* 设置按钮的 z-index 为更高的值 */
+    z-index: 100; /* 设置按钮的 z-index 为更高的值 */
 }
 
 
