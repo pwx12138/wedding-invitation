@@ -22,17 +22,26 @@ function generateHeartPeach() {
     })
     setTimeout(generateHeartPeach, 250); // 每500毫秒再生成一个新的爱心桃
 }
-// function clearHearts() {
-//     // 获取所有 class 为 'heart' 的元素
-//     const hearts = document.querySelectorAll('.container .heart');
 
-//     // 遍历所有匹配的元素并删除
-//     hearts.forEach(function(heart) {
-//         heart.remove();
-//     });
-// }
+function startHeart() {
+    // 创建一个新的 div 元素
+    var heart1 = document.createElement('div');
+    heart1.classList.add('heart1'); // 给它添加 'heart' 类来应用样式
 
-// // 每 5 秒钟执行一次清理操作
-// setInterval(clearHearts, 5000);
+    // 设置爱心桃图片出现的起始位置
+    var randomX = window.innerWidth/2 - 25; 
+    var randomY = window.innerHeight/2 - 25 ; 
 
-generateHeartPeach();
+    heart1.style.left = randomX + 'px';
+    heart1.style.top = randomY + 'px';
+
+    // 将新创建的元素添加到页面中
+    document.querySelector('.container').appendChild(heart1);
+    heart1.addEventListener('animationend', function() {
+        heart1.remove()
+        generateHeartPeach()
+    })
+    setTimeout(generateHeartPeach, 250); // 每500毫秒再生成一个新的爱心桃
+}
+
+startHeart()

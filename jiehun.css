@@ -45,6 +45,20 @@ body {
     z-index: 1; /* 确保它位于底层 */
 }
 
+.heart1 {
+    position: absolute;
+    width: 50px;
+    /* 初始大小 */
+    height: 50px;
+    /* 初始大小 */
+    background-image: url('images/heart-peach.png');
+    /* 替换为你的爱心桃图片路径 */
+    background-size: cover;
+    animation: growAndFade1 5s forwards;
+    /* 动画效果 */
+    z-index: 1; /* 确保它位于底层 */
+}
+
 /* 图片从小到大、逐渐消失的动画 */
 @keyframes growAndFade {
     0% {
@@ -61,6 +75,27 @@ body {
 
     100% {
         transform: scale(2);
+        /* 放到最大 */
+        opacity: 0;
+        /* 完全透明消失 */
+    }
+}
+
+@keyframes growAndFade1 {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(3);
+        /* 放大 */
+        opacity: 0.7;
+        /* 逐渐变透明 */
+    }
+
+    100% {
+        transform: scale(6);
         /* 放到最大 */
         opacity: 0;
         /* 完全透明消失 */
