@@ -39,8 +39,11 @@ function startHeart() {
     document.querySelector('.container').appendChild(heart1);
     heart1.addEventListener('animationend', function() {
         heart1.remove()
+        musicElement.play();
         generateHeartPeach()
     })
 }
+
+var musicElement = document.getElementById('background-music');
 
 startHeart()
