@@ -37,14 +37,32 @@ function startHeart() {
 
     // 将新创建的元素添加到页面中
     document.querySelector('.container').appendChild(heart1);
-    heart1.addEventListener('animationend', function() {
+    heart1.addEventListener('animationend', function () {
         heart1.remove()
-        musicElement.muted = false;  // 解除静音
-        musicElement.play();
-        generateHeartPeach()
+        overlay.style.display = 'block'; // 显示遮罩层
+        // 创建一个按钮元素
+        const button = document.createElement('button');
+        button.classList.add('jinru-button');
+        button.innerText = '点击我！';
+
+        // 监听按钮的点击事件
+        button.addEventListener('click', function () {
+            button.classList.add('hidden');
+            // 隐藏遮罩层
+            overlay.style.display = 'none';
+            // 恢复页面交互
+            document.body.style.pointerEvents = 'auto';
+            musicElement.muted = false;  // 解除静音
+            musicElement.play();
+            generateHeartPeach();
+        });
+
+        // 将按钮添加到页面中
+        document.body.appendChild(button);
     })
 }
 
+const overlay = document.getElementById('overlay');
 var musicElement = document.getElementById('background-music');
 
 startHeart()
