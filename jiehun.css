@@ -115,8 +115,8 @@ body {
     border: none; /* 去掉默认边框 */
     cursor: pointer; /* 鼠标悬停时显示点击指针 */
     text-align: center; /* 让文字居中 */
-    width: 200px;  /* 调整按钮宽度 */
-    height: 200px; /* 调整按钮高度 */
+    width: 520px;  /* 调整按钮宽度 */
+    height: 520px; /* 调整按钮高度 */
     z-index: 1001; /* 确保按钮在遮罩层之上 */
     transition: opacity 0.5s ease; /* 渐变消失 */
 }
